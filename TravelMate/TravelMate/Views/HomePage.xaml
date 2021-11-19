@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TravelMate.Views.AboutPage"
+             xmlns:vm="clr-namespace:TravelMate.ViewModels"
+             Title="{Binding Title}"
+             BackgroundColor="#004c8c">
+
+    <StackLayout Margin="20,35,20,25">
+        <Label Text="TRAVEL MATE"
+               FontSize="30"
+               FontAttributes="Bold"
+               TextColor="#bb002f"
+               HorizontalOptions="Center"/>
+
+        <Label Text="Guest User"
+               FontSize="Medium"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+        <ImageButton Source="guest_user.png"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand"  
+                     BackgroundColor="#004c8c"/>
+
+        <Label Text="Registered User"
+               FontSize="Medium"
+               TextColor="White"
+               HorizontalOptions="Center"/>
+        <ImageButton Source="registered_user.png"
+                     HorizontalOptions="Center"
+                     VerticalOptions="CenterAndExpand"
+                     BackgroundColor="#004c8c"/>
+    </StackLayout>
+
+</ContentPage>

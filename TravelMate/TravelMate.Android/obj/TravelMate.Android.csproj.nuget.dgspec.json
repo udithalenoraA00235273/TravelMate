@@ -42,13 +42,21 @@
       "frameworks": {
         "monoandroid11.0": {
           "dependencies": {
+            "Com.Airbnb.Android.Lottie": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Xamarin.Android.Support.v7.AppCompat": {
+              "target": "Package",
+              "version": "[28.0.0.3, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2244, )"
             }
           }
         }
@@ -102,11 +110,11 @@
             },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.6.1, )"
+              "version": "[1.7.0, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2012, )"
+              "version": "[5.0.0.2244, )"
             }
           },
           "imports": [

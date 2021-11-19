@@ -1,8 +1,4 @@
-﻿using System;
-using TravelMate.Services;
-using TravelMate.Views;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace TravelMate
 {
@@ -13,7 +9,7 @@ namespace TravelMate
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+       
             MainPage = new AppShell();
         }
 
