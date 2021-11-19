@@ -1,12 +1,22 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using Xamarin.Forms;
 
 namespace TravelMate.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class HomePage : ContentPage
     {
-        public AboutPage()
+        public HomePage()
         {
             InitializeComponent();
+        }
+
+        private async void NavigateButton(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new SearchPage());
+        }
+        private async void NavigateButtonOne(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new UserCreation());
         }
     }
 }

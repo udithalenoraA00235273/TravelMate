@@ -24,8 +24,6 @@ com.google.android.material.bottomnavigation.BottomNavigationView;C:\Users\Lenov
 com.google.android.material.tabs.TabLayout;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\56\jl\res\layout\fallbacktabbardonotuse.xml
 com.google.android.material.tabs.TabLayout;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\56\jl\res\layout\rootlayout.xml
 com.google.android.material.tabs.TabLayout;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\56\jl\res\layout\tabbar.xml
-crc643f46942d9dd1fff9.ShellFlyoutLayout;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\56\jl\res\layout\flyoutcontent.xml
-crc64720bb2db43a66fe9.FormsViewPager;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\56\jl\res\layout\rootlayout.xml
 declare-styleable;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\1\jl\res\values\values.xml
 declare-styleable;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\56\jl\res\values\attrs.xml
 enum;C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate.Android\obj\Debug\110\lp\1\jl\res\values\values.xml
