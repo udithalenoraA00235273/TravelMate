@@ -5,9 +5,16 @@
              BackgroundColor="#004c8c">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Travel Mate"
+                   FontSize="25"
+                   FontAttributes="Bold"
+                   TextColor="#bb002f"
+                   HorizontalOptions="CenterAndExpand" />
+            <Label Text="Cheapest gas price in Town!"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   TextColor="#bb002f"
+                   HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

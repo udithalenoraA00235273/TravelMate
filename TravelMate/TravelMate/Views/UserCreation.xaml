@@ -5,11 +5,46 @@
              BackgroundColor="#004c8c">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="USER CREATION"
+            <Label 
+               Text="USER CREATION"
                FontSize="30"
                FontAttributes="Bold"
                TextColor="#bb002f"
                HorizontalOptions="Center"/>
+            
+            <Image
+                Source="registered_user"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"  
+                BackgroundColor="#004c8c"/>
+            
+            <Entry x:Name="firstName" 
+                   Placeholder="First Name"
+                   TextTransform="Uppercase"/>
+            
+            <Entry x:Name="lastName" 
+                   Placeholder="Last Name"
+                   TextTransform="Uppercase"/>
+            
+            <Entry x:Name="email" 
+                   Placeholder="Email Address"
+                   TextTransform="Lowercase"/>
+
+            <Entry x:Name="password" 
+                   Placeholder="Password"
+                   IsPassword="True"/>
+
+            <Entry x:Name="cpassword" 
+                   Placeholder="Confirm Password"
+                   IsPassword="True"/>
+
+            <Button
+                    Text="Create User"/>
+
+            <Button
+                    Text="Clear"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

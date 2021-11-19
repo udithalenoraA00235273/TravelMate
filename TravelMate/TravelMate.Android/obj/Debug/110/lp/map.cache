@@ -1,5 +1,7 @@
 FormsViewGroup.dll
 Lottie.Android.dll
+Microsoft.Graph.Core.dll
+Microsoft.Identity.Client.dll
 Square.OkIO.dll
 Xamarin.AndroidX.Activity.dll
 Xamarin.AndroidX.Annotation.dll
