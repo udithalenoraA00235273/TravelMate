@@ -35,7 +35,7 @@ namespace TravelMate.Droid
         async void SimulateStartup()
         {
             Log.Debug(TAG,"");
-            await Task.Delay(2000);
+            await Task.Delay(1000);
             Log.Debug(TAG,"");
             StartActivity(new Intent(Application.Context, typeof(MainActivity)));
         }

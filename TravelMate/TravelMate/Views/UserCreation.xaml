@@ -4,47 +4,65 @@
              x:Class="TravelMate.Views.UserCreation"
              BackgroundColor="#004c8c">
     <ContentPage.Content>
-        <StackLayout>
-            <Label 
+        <ScrollView>
+            <StackLayout Padding="30" VerticalOptions="Center" HorizontalOptions="FillAndExpand">
+                <Label 
                Text="USER CREATION"
                FontSize="30"
                FontAttributes="Bold"
                TextColor="#bb002f"
                HorizontalOptions="Center"/>
-            
-            <Image
+
+                <Image
                 Source="registered_user"
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="CenterAndExpand"  
                 BackgroundColor="#004c8c"/>
-            
-            <Entry x:Name="firstName" 
+
+                <Entry x:Name="firstName" 
+                   TextColor="Wheat"
                    Placeholder="First Name"
-                   TextTransform="Uppercase"/>
-            
-            <Entry x:Name="lastName" 
+                   TextTransform="Uppercase"
+                   FontSize="15"/>
+
+                <Entry x:Name="lastName" 
+                   TextColor="Wheat"
                    Placeholder="Last Name"
-                   TextTransform="Uppercase"/>
-            
-            <Entry x:Name="email" 
+                   TextTransform="Uppercase"
+                   FontSize="15"/>
+
+                <Entry x:Name="email" 
                    Placeholder="Email Address"
-                   TextTransform="Lowercase"/>
+                   TextTransform="Lowercase"
+                   FontSize="15"/>
 
-            <Entry x:Name="password" 
+                <Entry x:Name="password" 
                    Placeholder="Password"
-                   IsPassword="True"/>
+                   IsPassword="True"
+                   FontSize="15"/>
 
-            <Entry x:Name="cpassword" 
+                <Entry x:Name="cpassword" 
                    Placeholder="Confirm Password"
-                   IsPassword="True"/>
+                   IsPassword="True"
+                   FontSize="15"/>
 
-            <Button
-                    Text="Create User"/>
+                <Button
+                    VerticalOptions="Center"
+                    Text="Create User"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    BackgroundColor="#bb002f"
+                    Clicked="Handle_Clicked"/>
 
-            <Button
-                    Text="Clear"/>
+                <Button
+                    VerticalOptions="Center"
+                    Text="Clear"
+                    BorderWidth="1.5"
+                    CornerRadius="50"
+                    BackgroundColor="#4f83cc"/>
 
 
-        </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
