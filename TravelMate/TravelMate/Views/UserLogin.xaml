@@ -6,7 +6,7 @@
              xmlns:travelmate="clr-namespace:TravelMate" x:DataType="travelmate:AppShell"
              x:Class="TravelMate.Views.UserLogin">
 
-    <Grid BackgroundColor="#ESEBEE">
+    <Grid BackgroundColor="#004c8c">
         <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
         <Grid HeightRequest="520" Margin="30">
             <Path Fill="White" Aspect="Uniform" HorizontalOptions="Center"
@@ -16,12 +16,12 @@
             <Path Stroke="#QQC2FF" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
                   Data="M30.6,172.838V605.512L293.073,382.6822"/>
             <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Margin="50,0">
-                <Label Text="LOG IN" TextColor="Black" FontSize="20" FontAttributes="Bold"/>
+                <Label Text="LOG IN" FontSize="30" FontAttributes="Bold" FontFamily="LuckiestGuy-Regular.ttf"/>
                 <StackLayout Spacing="10">
-                    <Grid WidthRequest="160" Padding="10,0" BackgroundColor="#F6F6F6" HorizontalOptions="Start">
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
                         <Entry Placeholder="Email Address" FontSize="12"/>
                     </Grid>
-                    <Grid WidthRequest="160" Padding="10,0" BackgroundColor="#F6F6F6" HorizontalOptions="Start">
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
                         <Entry Placeholder="Password" IsPassword="True" FontSize="12"/>
                     </Grid>
                 </StackLayout>

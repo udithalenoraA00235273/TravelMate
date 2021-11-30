@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "CgCbqMmXS2FQb14znOiJb9+f0Fv/NErhlAGBjvE9kvxUzYQZ7vNZ1Bm5pCpy8G5G0vgqrMr2ks/uw4Ke2XyNmw==",
+  "dgSpecHash": "xEr8n0ZoUr+7UHhYoQxzYboLE11QSiCu0nAtLsIkvf+K34Ih6OOEGQT+gmIhCqbm+AbL43whZdpK9NWlSFfp2w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Lenovo\\source\\repos\\TravelMate\\TravelMate\\TravelMate\\TravelMate.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\azure.core\\1.18.0\\azure.core.1.18.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\firebaseauthentication.net\\3.7.2\\firebaseauthentication.net.3.7.2.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.graph\\4.11.0\\microsoft.graph.4.11.0.nupkg.sha512",

@@ -19,18 +19,12 @@
                 VerticalOptions="CenterAndExpand"  
                 BackgroundColor="#004c8c"/>
 
-                <Entry x:Name="firstName" 
+                <Entry x:Name="userName" 
                    TextColor="Wheat"
                    Placeholder="First Name"
                    TextTransform="Uppercase"
                    FontSize="15"/>
-
-                <Entry x:Name="lastName" 
-                   TextColor="Wheat"
-                   Placeholder="Last Name"
-                   TextTransform="Uppercase"
-                   FontSize="15"/>
-
+                
                 <Entry x:Name="email" 
                    Placeholder="Email Address"
                    TextTransform="Lowercase"
@@ -52,7 +46,7 @@
                     BorderWidth="1.5"
                     CornerRadius="50"
                     BackgroundColor="#bb002f"
-                    Clicked="Handle_Clicked"/>
+                    Clicked="User_Registered"/>
 
                 <Button
                     VerticalOptions="Center"
