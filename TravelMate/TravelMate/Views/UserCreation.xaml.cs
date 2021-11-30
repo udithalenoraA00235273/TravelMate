@@ -20,53 +20,66 @@ namespace TravelMate.Views
 
         private async void User_Registered(object sender, EventArgs e)
         {
-            string name = userName.Text;
-            string email_address = email.Text;
-            string password_one = password.Text;
-            string password_two = cpassword.Text;
+            try
+            {
+                string name = userName.Text;
+                string email_address = email.Text;
+                string password_one = password.Text;
+                string password_two = cpassword.Text;
 
-            if (string.IsNullOrEmpty(first_name))
-            {
-                await DisplayAlert("Warning","First Name Cannot be blank!","OK");
-                return;
-            }
-            if (string.IsNullOrEmpty(last_name))
-            {
-                await DisplayAlert("Warning", "Last Name Cannot be blank!", "OK");
-                return;
-            }
-            if (string.IsNullOrEmpty(email_address))
-            {
-                await DisplayAlert ("Warning", "Email Address Cannot be blank!", "OK");
-                return;
-            }
-            if (string.IsNullOrEmpty(password_one))
-            {
-                await DisplayAlert ("Warning", "Password Cannot be blank!", "OK");
-                return;
-            }
-            if (string.IsNullOrEmpty(password_two))
-            {
-                await DisplayAlert ("Warning", "Please confirm the Password!", "OK");
-                return;
-            }
-            if (password_one!=password_two)
-            {
-                await DisplayAlert ("Warning", "Password Not Matching!", "OK");
-                return;
-            }
+                if (string.IsNullOrEmpty(name))
+                {
+                    await DisplayAlert("Warning", "First Name Cannot be blank!", "OK");
+                    return;
+                }
+                if (string.IsNullOrEmpty(email_address))
+                {
+                    await DisplayAlert("Warning", "Email Address Cannot be blank!", "OK");
+                    return;
+                }
+                if (password_one.Length<6)
+                {
+                    await DisplayAlert("Warning", "Password must contain at least 6 characters!", "OK");
+                    return;
+                }
+                if (string.IsNullOrEmpty(password_one))
+                {
+                    await DisplayAlert("Warning", "Password Cannot be blank!", "OK");
+                    return;
+                }
+                if (string.IsNullOrEmpty(password_two))
+                {
+                    await DisplayAlert("Warning", "Please confirm the Password!", "OK");
+                    return;
+                }
+                if (password_one != password_two)
+                {
+                    await DisplayAlert("Warning", "Password Not Matching!", "OK");
+                    return;
+                }
 
-            bool isRegistered = await userRepo.Register(name, email_address, password_one);
-            if (isRegistered)
-            {
-                await DisplayAlert("User", "Successfully Registered", "OK");
+                bool isRegistered = await userRepo.Register(email_address, password_one, name);
+                if (isRegistered)
+                {
+                    await DisplayAlert("User", "Successfully Registered", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("User", "Regsitration Unsuccessful", "OK");
+                }
             }
-            else
+            catch(Exception exception)
             {
-                await DisplayAlert("User", "Regsitration Unsuccessful", "OK");
-            }
+                if(exception.Message.Contains("EMAIL_EXISTS"))
+                {
+                   await DisplayAlert("Warning", "Email Address Already Exists!", "OK");
+                }
+                else
+                {
+                    await DisplayAlert("Error", exception.Message, "OK");
+                }
+            }         
+
         }
-
-
     }
 }

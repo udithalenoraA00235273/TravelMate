@@ -4,7 +4,10 @@ public class MonoPackageManager_Resources {
 		/* We need to ensure that "TravelMate.Android.dll" comes first in this list. */
 		"TravelMate.Android.dll",
 		"Azure.Core.dll",
+		"Firebase.Auth.dll",
+		"Firebase.dll",
 		"FormsViewGroup.dll",
+		"LiteDB.dll",
 		"Lottie.Android.dll",
 		"Microsoft.Bcl.AsyncInterfaces.dll",
 		"Microsoft.Graph.Core.dll",
@@ -25,6 +28,7 @@ public class MonoPackageManager_Resources {
 		"System.Diagnostics.DiagnosticSource.dll",
 		"System.IdentityModel.Tokens.Jwt.dll",
 		"System.Memory.Data.dll",
+		"System.Reactive.dll",
 		"System.Text.Encodings.Web.dll",
 		"System.Text.Json.dll",
 		"TravelMate.dll",

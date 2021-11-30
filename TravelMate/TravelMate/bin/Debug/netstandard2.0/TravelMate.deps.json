@@ -9,6 +9,8 @@
     ".NETStandard,Version=v2.0/": {
       "TravelMate/1.0.0": {
         "dependencies": {
+          "FirebaseAuthentication.net": "3.7.2",
+          "FirebaseDatabase.net": "4.0.7",
           "Microsoft.Graph": "4.11.0",
           "NETStandard.Library": "2.0.3",
           "Newtonsoft.Json": "13.0.1",
@@ -38,6 +40,43 @@
           "lib/netstandard2.0/Azure.Core.dll": {
             "assemblyVersion": "1.18.0.0",
             "fileVersion": "1.1800.21.41806"
+          }
+        }
+      },
+      "FirebaseAuthentication.net/3.7.2": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Firebase.Auth.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "FirebaseDatabase.net/4.0.7": {
+        "dependencies": {
+          "LiteDB": "4.1.4",
+          "Newtonsoft.Json": "13.0.1",
+          "System.Reactive": "4.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Firebase.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "LiteDB/4.1.4": {
+        "dependencies": {
+          "System.Reflection": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {
+            "assemblyVersion": "4.1.4.0",
+            "fileVersion": "4.1.4.0"
           }
         }
       },
@@ -688,6 +727,17 @@
           "Microsoft.NETCore.Targets": "1.1.3"
         }
       },
+      "System.Reactive/4.0.0": {
+        "dependencies": {
+          "System.Runtime.InteropServices.WindowsRuntime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Reactive.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.398"
+          }
+        }
+      },
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.1",
@@ -811,6 +861,17 @@
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.InteropServices.WindowsRuntime.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
         }
       },
       "System.Runtime.Numerics/4.3.0": {
@@ -1306,6 +1367,27 @@
       "path": "azure.core/1.18.0",
       "hashPath": "azure.core.1.18.0.nupkg.sha512"
     },
+    "FirebaseAuthentication.net/3.7.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-d0Zc0tiE7NutI/jMX/T81LU/rX3HVBH8vtvKTbIeN6BCIQ+wipstz7tm5MnIgAeh4ehqCHTiVuMOHztqfCVCBQ==",
+      "path": "firebaseauthentication.net/3.7.2",
+      "hashPath": "firebaseauthentication.net.3.7.2.nupkg.sha512"
+    },
+    "FirebaseDatabase.net/4.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yj8J5al66pCXRibNsK0K1wB1ZsPeCJCnwRVfwCcd6ZQ5tbwouObt0hgp+LmzKY90bLfQJuwmnLpKzVYGwD/6xA==",
+      "path": "firebasedatabase.net/4.0.7",
+      "hashPath": "firebasedatabase.net.4.0.7.nupkg.sha512"
+    },
+    "LiteDB/4.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-g4g9JlHzRBZl+Gd2UbiRdszZ7t8wozU2wX7+5xY5uE79tmcgcDhha+ubAP84G1VLbwQmhBGCzRfIx+epLmJciQ==",
+      "path": "litedb/4.1.4",
+      "hashPath": "litedb.4.1.4.nupkg.sha512"
+    },
     "Microsoft.Bcl.AsyncInterfaces/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1761,6 +1843,13 @@
       "path": "system.private.uri/4.3.2",
       "hashPath": "system.private.uri.4.3.2.nupkg.sha512"
     },
+    "System.Reactive/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yaVAxT2Yl28p9+DupGwj2oPbIOYZUQimOQ+n7N7vML2oofIRj9BmcfD7DHc6FLrNah65EigOgG6U9VnwWEyz5g==",
+      "path": "system.reactive/4.0.0",
+      "hashPath": "system.reactive.4.0.0.nupkg.sha512"
+    },
     "System.Reflection/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -1851,6 +1940,13 @@
       "sha512": "sha512-uv1ynXqiMK8mp1GM3jDqPCFN66eJ5w5XNomaK2XD+TuCroNTLFGeZ+WCmBMcBDyTFKou3P6cR6J/QsaqDp7fGQ==",
       "path": "system.runtime.interopservices/4.3.0",
       "hashPath": "system.runtime.interopservices.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.InteropServices.WindowsRuntime/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J4GUi3xZQLUBasNwZnjrffN8i5wpHrBtZoLG+OhRyGo/+YunMRWWtwoMDlUAIdmX0uRfpHIBDSV6zyr3yf00TA==",
+      "path": "system.runtime.interopservices.windowsruntime/4.3.0",
+      "hashPath": "system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512"
     },
     "System.Runtime.Numerics/4.3.0": {
       "type": "package",
