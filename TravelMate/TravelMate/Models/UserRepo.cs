@@ -25,5 +25,15 @@ namespace TravelMate.Models
             return false;
         }
 
+        public async Task<string> SignIn(string email_address, string password_one)
+        {
+            var token = await authProvider.SignInWithEmailAndPasswordAsync(email_address, password_one);
+            if(!string.IsNullOrEmpty(token.FirebaseToken))
+            {
+                return token.FirebaseToken;
+            }
+            return "";
+        }
+
     }
 }

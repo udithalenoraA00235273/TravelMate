@@ -19,15 +19,23 @@
                 <Label Text="LOG IN" FontSize="30" FontAttributes="Bold" FontFamily="LuckiestGuy-Regular.ttf"/>
                 <StackLayout Spacing="10">
                     <Grid WidthRequest="160"  HorizontalOptions="Start">
-                        <Entry Placeholder="Email Address" FontSize="12"/>
+                        <Entry x:Name="email" Placeholder="Email Address" FontSize="12"/>
                     </Grid>
                     <Grid WidthRequest="160"  HorizontalOptions="Start">
-                        <Entry Placeholder="Password" IsPassword="True" FontSize="12"/>
+                        <Entry x:Name="password" Placeholder="Password" IsPassword="True" FontSize="12"/>
+                    </Grid>
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Button x:Name="sign_in" Text="LOG IN" BorderWidth="1.5" CornerRadius="50" 
+                                Clicked="BtnUserLogin" BackgroundColor="#bb002f"/>
+                    </Grid>
+                    <Label Text="Don't Have An Account?" FontSize="15" FontAttributes="Bold" FontFamily="LuckiestGuy-Regular.ttf"/>
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Button x:Name="nav_user_create" Text="Create Account" BorderWidth="1.5" CornerRadius="50" 
+                            Clicked ="NavigateButtonThree" BackgroundColor="#bb002f"/>
                     </Grid>
                 </StackLayout>
             </StackLayout>
         </Grid>
-
     </Grid>
     
 </ContentPage>
