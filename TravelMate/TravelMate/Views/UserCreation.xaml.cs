@@ -12,7 +12,7 @@ namespace TravelMate.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UserCreation : ContentPage
     {
-        UserRepo userRepo = new UserRepo();
+        readonly UserRepo userRepo = new UserRepo();
         public UserCreation()
         {
             InitializeComponent();

@@ -8,8 +8,8 @@ namespace TravelMate.Models
 {
     public class UserRepo
     {
-        string webAPIKey = "AIzaSyAaHWl9yVnTYd9oYqhn1NKtpfplQfH84d4";
-        FirebaseAuthProvider authProvider;
+        readonly string webAPIKey = "AIzaSyAaHWl9yVnTYd9oYqhn1NKtpfplQfH84d4";
+        readonly FirebaseAuthProvider authProvider;
 
         public UserRepo()
         {

@@ -12,7 +12,7 @@ namespace TravelMate.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class FogotPassword : ContentPage
     {
-        UserRepo userRepository = new UserRepo();
+        readonly UserRepo userRepository = new UserRepo();
         public FogotPassword()
         {
             InitializeComponent();
