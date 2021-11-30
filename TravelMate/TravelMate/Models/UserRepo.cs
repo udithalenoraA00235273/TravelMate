@@ -35,5 +35,11 @@ namespace TravelMate.Models
             return "";
         }
 
+        public async Task<bool>ResetPassword(string email_address)
+        {
+            await authProvider.SendPasswordResetEmailAsync(email_address);
+            return true;
+        }
+
     }
 }

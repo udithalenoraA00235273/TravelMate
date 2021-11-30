@@ -22,6 +22,10 @@ namespace TravelMate.Views
         {
             await Navigation.PushModalAsync(new UserCreation());
         }
+        private async void NavigateButtonFour(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new FogotPassword());
+        }
         private async void BtnUserLogin(object sender, EventArgs e)
         {
             try

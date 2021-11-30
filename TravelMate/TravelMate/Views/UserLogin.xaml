@@ -33,6 +33,10 @@
                         <Button x:Name="nav_user_create" Text="Create Account" BorderWidth="1.5" CornerRadius="50" 
                             Clicked ="NavigateButtonThree" BackgroundColor="#bb002f"/>
                     </Grid>
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Button x:Name="nav_forgot_pass" Text="FORGOT PASSWORD" BorderWidth="1.5" CornerRadius="50" 
+                            Clicked ="NavigateButtonFour" BackgroundColor="#bb002f"/>
+                    </Grid>
                 </StackLayout>
             </StackLayout>
         </Grid>
