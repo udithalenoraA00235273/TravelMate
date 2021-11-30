@@ -62,6 +62,7 @@ namespace TravelMate.Views
                 if (isRegistered)
                 {
                     await DisplayAlert("User", "Successfully Registered", "OK");
+                    await Navigation.PopModalAsync();
                 }
                 else
                 {
