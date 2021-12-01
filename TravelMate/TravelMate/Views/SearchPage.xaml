@@ -3,23 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewmodel="clr-namespace:TravelMate.ViewModels"
              x:Class="TravelMate.Views.SearchPage"
              BackgroundColor="#004c8c">
-   
-  
-        <ScrollView>
-            <Grid>
-                <CollectionView > 
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <StackLayout HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
-                                <Label Text="{Binding name}" FontSize="Medium" TextColor="Black"/>
-                                <Label Text="{Binding FuelStationsModel.Brand}" FontSize="Small" TextColor="Gray"/>
-                            </StackLayout>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                    
-                </CollectionView> 
-                
-            </Grid>
-        </ScrollView>
-    
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand" Margin="0" Padding="0">
+            
+         </StackLayout>
+    </ContentPage.Content>
+
 </ContentPage>

@@ -28,6 +28,9 @@
                 </Setter>
             </Style>
         </ResourceDictionary>
+        <OnPlatform x:TypeArguments="x:String" x:Key="LuckiestGuyRegular">
+            <On Platform="Android" Value="LuckiestGuy-Regular.ttf#Regular"/>
+        </OnPlatform>
     </Application.Resources>
 </Application>
     
