@@ -12,6 +12,8 @@ namespace TravelMate.ViewModels
 {
     public class SearchViewModel: INotifyPropertyChanged
     {
+        public string label { get; set; }
+        public string city { get; set; }
         public event PropertyChangedEventHandler PropertyChanged;
         IPlaceService ips = DependencyService.Get<IPlaceService>();
 
@@ -25,7 +27,7 @@ namespace TravelMate.ViewModels
             set
             {
                 addresses = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+               // PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
             }
         }
 
@@ -39,19 +41,22 @@ namespace TravelMate.ViewModels
         string tokenType = "bearer";
         string q = "petrol+station";
         int limit = 5;
-        
+        double latitude = 46.49;
+        double longitude = -80.99001;
+
+
 
         private async void getPlace()
         {
-            var location = await Geolocation.GetLastKnownLocationAsync();
-            if(location!=null)
             {
-                var result = await ips.GetPlace(Base_Url, location.Latitude, location.Longitude, q, limit, accessToken, tokenType);
+                var result = await ips.GetPlace(Base_Url, latitude, longitude, q, limit, accessToken, tokenType);
                 if(result!=null)
                 {
-                    Addresses = result.response.addresses;
+                    var addresses = result.response.addresses;
                 }
-            }       
+            }
+           // label = Addresses[0].label;
+           // city = Addresses[0].city;
         }
     }
 }

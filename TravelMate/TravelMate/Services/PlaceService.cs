@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using TravelMate.Models;
@@ -13,9 +14,12 @@ namespace TravelMate.Services
     {
         public async Task<Place> GetPlace(string Base_url, double lat, double lon, string q, int limit, string accessToken, string tokenType)
         {
-            string ll = $"{lat},{lon}";
-            string url = Base_url + $"?at={ll}&q={q}&limit={limit}&access_token={accessToken}&token_type={tokenType}";
+       
+            string ll = lat + "," + lon;
+            string url = Base_url + $"?at={ll}&q={q}&limit={limit}";
             HttpClient client= new HttpClient();
+            var authHeader = new AuthenticationHeaderValue("bearer", accessToken);
+            client.DefaultRequestHeaders.Authorization = authHeader;
             HttpResponseMessage response = await client.GetAsync(url);
 
             if (response != null)

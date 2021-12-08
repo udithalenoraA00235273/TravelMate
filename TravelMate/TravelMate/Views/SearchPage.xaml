@@ -30,7 +30,7 @@
 
             <StackLayout>
                 <Label Text="Limit:" TextColor="ForestGreen" FontAttributes="Bold" Margin="10,10,0,0"/>
-                <Entry Text="{Binding Limit, Mode=TwoWay}" Placeholder="You can change limit" Margin="10,0"></Entry>
+                 <!--<Entry Text="{Binding limit, Mode=TwoWay}" Placeholder="You can change limit" Margin="10,0"></Entry>--> 
                 <StackLayout>
                     <Label Text="Result :" TextColor="Red" FontAttributes="Bold" Margin="10,10"/>
                 </StackLayout>
