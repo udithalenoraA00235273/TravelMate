@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelMate.Android", "TravelMate\TravelMate.Android\TravelMate.Android.csproj", "{9A767B4F-15CD-4289-9665-4467386C4AA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelMate", "TravelMate\TravelMate\TravelMate.csproj", "{F488FF24-E535-400C-A4A6-A86324C21032}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelMate", "TravelMate\TravelMate\TravelMate.csproj", "{F488FF24-E535-400C-A4A6-A86324C21032}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

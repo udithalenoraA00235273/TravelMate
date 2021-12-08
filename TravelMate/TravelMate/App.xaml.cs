@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using TravelMate.Services;
+using Xamarin.Forms;
 
 namespace TravelMate
 {
@@ -8,6 +9,7 @@ namespace TravelMate
         public App()
         {
             InitializeComponent();
+            DependencyService.Register<IPlaceService, PlaceService>();
             Device.SetFlags(new[] { "Shapes_Experimental", "MediaElement_Experimental" });
             MainPage = new AppShell();
         }

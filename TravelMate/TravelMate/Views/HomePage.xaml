@@ -4,7 +4,6 @@
              x:Class="TravelMate.Views.HomePage"
              Title="{Binding Title}"
              BackgroundColor="#004c8c">
-
     <StackLayout>
         <Label Text="TRAVEL MATE"
                FontSize="30"
@@ -12,25 +11,38 @@
                TextColor="#bb002f"
                HorizontalOptions="Center"/>
 
-        <Label Text="Guest User"
+        <Grid BackgroundColor="#004c8c">
+        <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
+        <Grid HeightRequest="500" Margin="20">
+            
+            <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
+                  Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
+                <Label Text="Guest User"
                FontSize="Large"
                TextColor="White"
                HorizontalOptions="Center"/>
-        <ImageButton Source="guest_user.png"
+                <ImageButton Source="guest_user.png"
                      HorizontalOptions="Center"
                      VerticalOptions="CenterAndExpand"  
                      BackgroundColor="#004c8c"
                      Clicked="NavigateButton"/>
-
-        <Label Text="Registered User"
+            </Grid>
+        </Grid>
+        <Grid BackgroundColor="#004c8c">
+            <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
+            <Grid HeightRequest="500" Margin="20">
+                <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
+                  Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
+                <Label Text="Registered User"
                FontSize="Large"
                TextColor="White"
                HorizontalOptions="Center"/>
-        <ImageButton Source="registered_user.png"
+                <ImageButton Source="registered_user.png"
                      HorizontalOptions="Center"
                      VerticalOptions="CenterAndExpand"
                      BackgroundColor="#004c8c"
                      Clicked="NavigateButtonOne"/>
+            </Grid>
+        </Grid>
     </StackLayout>
-
 </ContentPage>
