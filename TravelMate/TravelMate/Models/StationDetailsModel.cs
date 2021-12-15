@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using Xamarin.Forms;
 
 namespace TravelMate.Models
 {
@@ -11,7 +12,7 @@ namespace TravelMate.Models
 
         public class Address
         {
-            public string label { get; set; }
+            public string labels { get; set; }
             public string countryCode { get; set; }
             public string countryName { get; set; }
             public string stateCode { get; set; }
@@ -118,7 +119,6 @@ namespace TravelMate.Models
 
         public class Response
         {
-            public ObservableCollection<Address> addresses { get; set; }
         }
 
         public class Place

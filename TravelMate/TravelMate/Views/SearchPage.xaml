@@ -5,36 +5,33 @@
     <ContentPage.BindingContext>
         <vm:SearchViewModel/>
     </ContentPage.BindingContext>
-    <NavigationPage.TitleView>
-        <Label Text="Search Places" FontSize="20" FontAttributes="Bold" TextColor="White"/>
-    </NavigationPage.TitleView>
-    <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="0.4"/>
-                <RowDefinition Height="0.6"/>
-                <RowDefinition Height="0.1"/>
-            </Grid.RowDefinitions>
-            <ScrollView Grid.Row="1" BackgroundColor="DarkGray">
-                <CollectionView ItemsSource="{Binding Addresses}">
+    <ScrollView>
+    <Grid BackgroundColor="#004c8c">
+        <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
+        <Grid HeightRequest="500" Margin="20">
+            <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
+                  Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
+            <Path Fill="white" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
+                  Data="M30.6,172.838V650.665L320.465,404.5812" Opacity="0.8"/>
+            <StackLayout Spacing="50" VerticalOptions="CenterAndExpand" Margin="50,0">
+                <Label Text="Search Results" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
+                       TextColor="#bb002f" FontFamily="LuckiestGuy-Regular.ttf#Regular"/>
+
+                <CollectionView ItemsSource="{Binding ItemList}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <StackLayout>
-                                <Label Text="{Binding label}"/>
-                                <Label Text="{Binding city}"/>
-                            </StackLayout>
-                        </DataTemplate>
+                                <StackLayout>
+                                    <Label Text="{Binding title}" VerticalTextAlignment="Center" FontSize="Large" TextTransform="Uppercase" TextColor="Red"/>
+                                    <Label Text="{Binding address.city}" VerticalTextAlignment="Center" FontSize="Small" TextTransform="Uppercase"/>
+                                    <Label Text="{Binding address.street}" VerticalTextAlignment="Center" FontSize="Subtitle" TextTransform="Uppercase"/>
+                                    <Label Text="{Binding address.postalCode}" VerticalTextAlignment="Center" FontSize="Subtitle" TextTransform="Uppercase"/>
+                                </StackLayout>
+                            </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
-            </ScrollView>
 
-            <StackLayout>
-                <Label Text="Limit:" TextColor="ForestGreen" FontAttributes="Bold" Margin="10,10,0,0"/>
-                 <!--<Entry Text="{Binding limit, Mode=TwoWay}" Placeholder="You can change limit" Margin="10,0"></Entry>--> 
-                <StackLayout>
-                    <Label Text="Result :" TextColor="Red" FontAttributes="Bold" Margin="10,10"/>
-                </StackLayout>
             </StackLayout>
         </Grid>
-    </ContentPage.Content>
+    </Grid>
+    </ScrollView>
 </ContentPage>

@@ -4,7 +4,8 @@ using System.Text;
 
 namespace TravelMate.ViewModels
 {
-    class UserCreationViewModel
+    public class UserCreationViewModel
     {
+
     }
 }
