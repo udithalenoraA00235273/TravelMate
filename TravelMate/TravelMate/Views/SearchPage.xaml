@@ -19,8 +19,9 @@
                     <StackLayout Spacing="1">
                         <Entry x:Name="lat" Placeholder="Latitude" FontSize="15"/>
                         <Entry x:Name="long" Placeholder="Longitude" FontSize="15"/>
+                        <Entry x:Name="place_search" Placeholder="Place You Want to Search" FontSize="15"/>
                         <Button x:Name="searchButton" Text="Search Results" BorderWidth="0.5" CornerRadius="50" 
-                             BackgroundColor="#4f83cc"/>
+                                BackgroundColor="#4f83cc"/>
                     </StackLayout>
 
                     <CollectionView ItemsSource="{Binding ItemList}">
@@ -36,6 +37,10 @@
                                     <Label Text="{Binding address.postalCode}" VerticalTextAlignment="Center" FontSize="Small" 
                                            TextTransform="Uppercase" TextColor="Black"
                                            FontAttributes="Bold"/>
+                                    <Grid WidthRequest="150"  HorizontalOptions="EndAndExpand">
+                                            <Button x:Name="get_directions" Text="Get Directions" BorderWidth="1.5" CornerRadius="50" 
+                                             BackgroundColor="#f50057"/>
+                                    </Grid>
                                 </StackLayout>
                             </DataTemplate>
                     </CollectionView.ItemTemplate>

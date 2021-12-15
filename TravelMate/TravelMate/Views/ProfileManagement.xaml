@@ -2,12 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TravelMate.Views.ProfileManagement"
-             BackgroundColor="#004c8c">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+             BackgroundColor="#004c8c"
+             Shell.NavBarIsVisible="False">
+
+
+    <Grid BackgroundColor="#004c8c">
+        <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
+        <Grid HeightRequest="500" Margin="20">
+            <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
+                  Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
+            <Path Fill="white" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
+                  Data="M30.6,172.838V650.665L320.465,404.5812" Opacity="0.8"/>
+            <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Margin="50,0">
+                <Label Text="PROFILE" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
+                       TextColor="#bb002f" FontFamily="LuckiestGuy-Regular.ttf#Regular"/>
+                <Label Text="User Details" FontSize="20" FontAttributes="Bold"  HorizontalOptions="Center" 
+                       TextColor="Black"/>
+                <StackLayout Spacing="12">
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Label Text="Full Name" FontSize="15"/>
+                    </Grid>
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Label Text="Email Address" FontSize="15"/>
+                    </Grid>
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Button x:Name="sign_in" Text="Reset Password" BorderWidth="1.5" CornerRadius="50" 
+                                BackgroundColor="#4f83cc"/>
+                    </Grid>
+                    <Grid WidthRequest="160"  HorizontalOptions="Start">
+                        <Button x:Name="nav_forgot_pass" Text="Sign Out" BorderWidth="0.5" CornerRadius="50" 
+                                BackgroundColor="#bb002f"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </Grid>
 </ContentPage>

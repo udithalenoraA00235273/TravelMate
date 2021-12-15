@@ -10,8 +10,8 @@
             <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
                   Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
             <Path Fill="white" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
-                  Data="M30.6,172.838V650.665L320.465,404.5812" Opacity="0.8"/>
-            <StackLayout Spacing="30" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Margin="15,0">
+                  Data="M30.6,172.838V550.665L320.465,404.5812" Opacity="0.8"/>
+            <StackLayout Spacing="50" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Margin="15,0">
                 <Label Text="TRAVEL MATE" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
                        TextColor="#bb002f" FontFamily="LuckiestGuy-Regular.ttf#Regular"/>
                 <StackLayout Spacing="15">

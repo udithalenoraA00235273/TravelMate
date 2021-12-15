@@ -19,4 +19,4 @@ C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate\obj\Debug\netstand
 C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate\bin\Debug\netstandard2.0\TravelMate.dll.config
 C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate\obj\Debug\netstandard2.0\TravelMate.csproj.App.config
 C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate\obj\Debug\netstandard2.0\Views\SearchPage.xaml.g.cs
-C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate\obj\Debug\netstandard2.0\TravelMate.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\TravelMate\TravelMate\TravelMate\obj\Debug\netstandard2.0\Views\MapPage.xaml.g.cs
