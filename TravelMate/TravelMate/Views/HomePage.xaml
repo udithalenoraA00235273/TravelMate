@@ -4,45 +4,27 @@
              x:Class="TravelMate.Views.HomePage"
              Title="{Binding Title}"
              BackgroundColor="#004c8c">
-    <StackLayout>
-        <Label Text="TRAVEL MATE"
-               FontSize="30"
-               FontAttributes="Bold"
-               TextColor="#bb002f"
-               HorizontalOptions="Center"/>
-
-        <Grid BackgroundColor="#004c8c">
+    <Grid BackgroundColor="#004c8c">
         <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
         <Grid HeightRequest="500" Margin="20">
-            
             <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
                   Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
-                <Label Text="Guest User"
-               FontSize="Large"
-               TextColor="White"
-               HorizontalOptions="Center"/>
-                <ImageButton Source="guest_user.png"
-                     HorizontalOptions="Center"
-                     VerticalOptions="CenterAndExpand"  
-                     BackgroundColor="#004c8c"
-                     Clicked="NavigateButton"/>
-            </Grid>
+            <Path Fill="white" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
+                  Data="M30.6,172.838V650.665L320.465,404.5812" Opacity="0.8"/>
+            <StackLayout Spacing="30" VerticalOptions="CenterAndExpand"  HorizontalOptions="CenterAndExpand" Margin="15,0">
+                <Label Text="TRAVEL MATE" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
+                       TextColor="#bb002f" FontFamily="LuckiestGuy-Regular.ttf#Regular"/>
+                <StackLayout Spacing="15">
+                    <Grid WidthRequest="160" HeightRequest="120" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="guest_user" Text="TRY IT OUT" BorderWidth="1.5" CornerRadius="50" 
+                                Clicked="NavigateButton" BackgroundColor="#4f83cc"/>
+                    </Grid>
+                    <Grid WidthRequest="160"  HeightRequest="120" HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="registered_user" Text="REGISTERED USER" BorderWidth="0.5" CornerRadius="50" 
+                            Clicked ="NavigateButtonOne" BackgroundColor="#f50057"/>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
         </Grid>
-        <Grid BackgroundColor="#004c8c">
-            <BoxView Opacity="0.3" BackgroundColor="#00c2ff"/>
-            <Grid HeightRequest="500" Margin="20">
-                <Path Fill="black" Aspect="Uniform" HorizontalOptions="Center"
-                  Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
-                <Label Text="Registered User"
-               FontSize="Large"
-               TextColor="White"
-               HorizontalOptions="Center"/>
-                <ImageButton Source="registered_user.png"
-                     HorizontalOptions="Center"
-                     VerticalOptions="CenterAndExpand"
-                     BackgroundColor="#004c8c"
-                     Clicked="NavigateButtonOne"/>
-            </Grid>
-        </Grid>
-    </StackLayout>
+    </Grid>
 </ContentPage>

@@ -14,17 +14,28 @@
             <Path Fill="white" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
                   Data="M30.6,172.838V650.665L320.465,404.5812" Opacity="0.8"/>
             <StackLayout Spacing="50" VerticalOptions="CenterAndExpand" Margin="50,0">
-                <Label Text="Search Results" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
+                <Label Text="Search" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
                        TextColor="#bb002f" FontFamily="LuckiestGuy-Regular.ttf#Regular"/>
+                    <StackLayout Spacing="1">
+                        <Entry x:Name="lat" Placeholder="Latitude" FontSize="15"/>
+                        <Entry x:Name="long" Placeholder="Longitude" FontSize="15"/>
+                        <Button x:Name="searchButton" Text="Search Results" BorderWidth="0.5" CornerRadius="50" 
+                             BackgroundColor="#4f83cc"/>
+                    </StackLayout>
 
-                <CollectionView ItemsSource="{Binding ItemList}">
+                    <CollectionView ItemsSource="{Binding ItemList}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                                <StackLayout>
-                                    <Label Text="{Binding title}" VerticalTextAlignment="Center" FontSize="Large" TextTransform="Uppercase" TextColor="Red"/>
-                                    <Label Text="{Binding address.city}" VerticalTextAlignment="Center" FontSize="Small" TextTransform="Uppercase"/>
-                                    <Label Text="{Binding address.street}" VerticalTextAlignment="Center" FontSize="Subtitle" TextTransform="Uppercase"/>
-                                    <Label Text="{Binding address.postalCode}" VerticalTextAlignment="Center" FontSize="Subtitle" TextTransform="Uppercase"/>
+                                <StackLayout WidthRequest="160" HorizontalOptions="Start">
+                                    <Label Text="{Binding title}" VerticalTextAlignment="Center" FontSize="Large" 
+                                           TextTransform="Uppercase" TextColor="#f50057" FontAttributes="Bold"/>
+                                    <Label Text="{Binding address.city}" VerticalTextAlignment="Center" FontSize="Medium" 
+                                           TextTransform="Uppercase" TextColor="Black" FontAttributes="Bold"  />
+                                    <Label Text="{Binding address.street}" VerticalTextAlignment="Center" FontSize="Small" 
+                                           TextTransform="Uppercase" TextColor="Black" FontAttributes="Bold"/>
+                                    <Label Text="{Binding address.postalCode}" VerticalTextAlignment="Center" FontSize="Small" 
+                                           TextTransform="Uppercase" TextColor="Black"
+                                           FontAttributes="Bold"/>
                                 </StackLayout>
                             </DataTemplate>
                     </CollectionView.ItemTemplate>
