@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:vm="clr-namespace:TravelMate.ViewModels"
-             x:Class="TravelMate.Views.SearchPage">
+             x:Class="TravelMate.Views.SearchPage"
+             Shell.NavBarIsVisible="False">
     <ContentPage.BindingContext>
         <vm:SearchViewModel/>
     </ContentPage.BindingContext>
@@ -13,21 +14,21 @@
                   Data ="M100.6,200.838V900.314L700.157,426.722" Opacity="0.2"/>
             <Path Fill="white" StrokeThickness="1" Aspect="Uniform" HorizontalOptions="Center"
                   Data="M30.6,172.838V650.665L320.465,404.5812" Opacity="0.8"/>
-            <StackLayout Spacing="50" VerticalOptions="CenterAndExpand" Margin="50,0">
-                <Label Text="Search" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
+            <StackLayout Spacing="10" VerticalOptions="CenterAndExpand" Margin="50,0">
+                    <Label Text="Search" FontSize="50" FontAttributes="Bold"  HorizontalOptions="Center" 
                        TextColor="#bb002f" FontFamily="LuckiestGuy-Regular.ttf#Regular"/>
-                    <StackLayout Spacing="1">
-                        <Entry x:Name="lat" Placeholder="Latitude" FontSize="15"/>
+                    <StackLayout WidthRequest="60" Spacing="1">
+                        <Entry x:Name="lat"  Placeholder="Latitude" FontSize="15"/>
                         <Entry x:Name="long" Placeholder="Longitude" FontSize="15"/>
                         <Entry x:Name="place_search" Placeholder="Place You Want to Search" FontSize="15"/>
-                        <Button x:Name="searchButton" Text="Search Results" BorderWidth="0.5" CornerRadius="50" 
+                        <Button Text="Search Results" BorderWidth="0.5" CornerRadius="50" 
                                 BackgroundColor="#4f83cc"/>
                     </StackLayout>
 
                     <CollectionView ItemsSource="{Binding ItemList}">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                                <StackLayout WidthRequest="160" HorizontalOptions="Start">
+                                <StackLayout WidthRequest="120" HorizontalOptions="CenterAndExpand">
                                     <Label Text="{Binding title}" VerticalTextAlignment="Center" FontSize="Large" 
                                            TextTransform="Uppercase" TextColor="#f50057" FontAttributes="Bold"/>
                                     <Label Text="{Binding address.city}" VerticalTextAlignment="Center" FontSize="Medium" 
@@ -35,6 +36,12 @@
                                     <Label Text="{Binding address.street}" VerticalTextAlignment="Center" FontSize="Small" 
                                            TextTransform="Uppercase" TextColor="Black" FontAttributes="Bold"/>
                                     <Label Text="{Binding address.postalCode}" VerticalTextAlignment="Center" FontSize="Small" 
+                                           TextTransform="Uppercase" TextColor="Black"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding phoneNumber}" VerticalTextAlignment="Center" FontSize="Small" 
+                                           TextTransform="Uppercase" TextColor="Black"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding openingTime}" VerticalTextAlignment="Center" FontSize="Small" 
                                            TextTransform="Uppercase" TextColor="Black"
                                            FontAttributes="Bold"/>
                                     <Grid WidthRequest="150"  HorizontalOptions="EndAndExpand">

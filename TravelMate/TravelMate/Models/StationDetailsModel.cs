@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
-using Xamarin.Forms;
+﻿using System.Collections.Generic;
 
 namespace TravelMate.Models
 {
@@ -115,6 +111,14 @@ namespace TravelMate.Models
             public List<Contact> contacts { get; set; }
             public List<OpeningHour> openingHours { get; set; }
             public List<Reference> references { get; set; }
+            
+            // readonly fields
+            public string phoneNumber { get; set; }
+            public string openingTime { get; set; }
+
+
+
+
         }
 
         public class Response

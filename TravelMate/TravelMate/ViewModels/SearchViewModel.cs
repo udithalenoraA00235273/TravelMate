@@ -38,12 +38,12 @@ namespace TravelMate.ViewModels
         }
 
         string Base_Url = "https://discover.search.hereapi.com/v1/discover";
-        string accessToken = "eyJhbGciOiJSUzUxMiIsImN0eSI6IkpXVCIsImlzcyI6IkhFUkUiLCJhaWQiOiJ2dTBHc2NrbHliRlA3MVpGVnNSTCIsImlhdCI6MTYzOTUzNDQ5OCwiZXhwIjoxNjM5NjIwODk4LCJraWQiOiJqMSJ9.ZXlKaGJHY2lPaUprYVhJaUxDSmxibU1pT2lKQk1qVTJRMEpETFVoVE5URXlJbjAuLkZXeTNxb21JQ0xaT1BlWlRUZF8wZ1EuQ3B5ZzFNdnRaTy1va0VHV2ZqMjhEdXZSZTVZd1ZyNmV0TXJwRHppeXYwY2NJNDAtUVlfOVV5d0JKcVFIS3ZPaWJOdGIxZW5RU2F6VjdQZHRvWjVQVGd6LW1remdzeGYwRW1wYWxrcnNUN0xWX2pqQTN4cXc2VEd3enJhMEpBcVN0U1ZHTU1aQ2twSlAwNnRCVEN1Z1h3LjhjanlVMDNDSzdqQ0lBQ0YtUjVYSmhXQU1wS0RfWTRSRjlnM1d2Yk8wa0k.he3ODuHa9G0JucNIEsekM7NSBAEw9D9zTMn1t5CluloS9faDSN8h03-DnyYimd5VjdNfttLXSNwsxjKvuGu1ydkJoftZuANc4sFsbvSeL-Svrnn9jDdmNJB2kBj7DJkqBSeVmCW47YUycXl1kQ8G7RKZdM1JU0rZV3B8a6iyyaFwOf-UNuvsS9wpt-qTyexSHTVgKqWNOplqpqzq2gtyTbaQvCfvpY87tuouLvUM2CCHi_KoVZk1G4NPtAd2NI3LEsdbr9-aaz6__g6FR40-Qlb5A8Tr4jYyDDY8nUfg5QSeaKukoIgHshGFcrctTLt1JkYVX7u4PQ1mEB1OURsAWw";
+        string accessToken = "eyJhbGciOiJSUzUxMiIsImN0eSI6IkpXVCIsImlzcyI6IkhFUkUiLCJhaWQiOiJ2dTBHc2NrbHliRlA3MVpGVnNSTCIsImlhdCI6MTYzOTY1OTYwNCwiZXhwIjoxNjM5NzQ2MDA0LCJraWQiOiJqMSJ9.ZXlKaGJHY2lPaUprYVhJaUxDSmxibU1pT2lKQk1qVTJRMEpETFVoVE5URXlJbjAuLnd2Y3JfTXpNcUtINjBfcmluRzJaUFEuR2Vuc1M0VUZWRGxIUzBuTnBrNWY3RTNTakZEdXh2bVRpUFNCRE93bGEyOHZSVDlXdktwRGpOMEUxQTVqMzljV05qdVN1Qlh2eHFmTVItb0JJTW5SaUg4cGsyVlF1NW41eE1TZkg0cXdfTXd6a2Zld2dnRTdkeHNaRlU5aFhDdlNNTUUtenpIWTRSRlBlR3AwZHJ6RnFRLndabGU2SlZiZDcwTFBvdWZSTE5qd3ZpdEVfOFNlRl9NSUsyVndtdEVBZkE.qzFz3PBMFLpZgkBT0RUuQnhAH4_i8JB6fW7GP7hJ7OFSerkZy78Wz0fDyOWEtQOxk5Mb4iSDj3D2EqC-jqpxgN7MLWQNFt_BN0zxE-ZlXDtYIVs5n0kmmk74shPP0svTRmOO8hkDrsdxeNyOd3d_218_f8R3ptbfFcj8B0cXam9rcLLR5WGV0RdxtJnKZHclEbDhkpPobkSX8e3wRzOjQfnhulqnn8NRfxLp6_i60PQXsi9hZRc3BAK9OU2rNiS9r6_J6BtLWjdqh9slP56hI80zNXY6LYmFNTCd8oTUH1Xk7W2SExz1y1HKhvrFYLBGMvUDvGEfjKOb2GHi6UGdeA";
         string tokenType = "bearer";
         string q = "petrol+station";
         int limit = 5;
-        double latitude = 46.49;
-        double longitude = -80.99001;
+        double latitude = 43.837208;
+        double longitude = -79.508278;
 
 
 
@@ -53,6 +53,18 @@ namespace TravelMate.ViewModels
                 var result = await ips.GetPlace(Base_Url, latitude, longitude, q, limit, accessToken, tokenType);
                 if(result!=null)
                 {
+                    result.items.ForEach(x => {
+                        if(x.contacts != null && x.contacts.Count > 0)
+                        {
+                            x.phoneNumber = x.contacts[0].phone[0].value;
+                        }
+                    });
+                    result.items.ForEach(c => {
+                        if (c.openingHours != null && c.openingHours.Count > 0)
+                        {
+                            c.openingTime = c.openingHours[0].text[0];
+                        }
+                    });
                     ItemList = new ObservableCollection<Item>(result.items);         
                 }
             }
